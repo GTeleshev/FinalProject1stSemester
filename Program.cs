@@ -53,15 +53,15 @@ string[] InputCheck()
 string[] OutPutArray(string[] stringArray)
 {
     int m = stringArray.Length;
-    int stringSize = 0;
-    string[] outputArray = new string[stringSize];
+    int outputSize = 0;
+    string[] outputArray = new string[outputSize];
     for (int i = 0; i < m; i++)
     {
         if (stringArray[i].Length <= 3)
         {
-            stringSize++;
-            Array.Resize(ref outputArray, stringSize);
-            outputArray[stringSize - 1] = stringArray[i];
+            outputSize++;
+            Array.Resize(ref outputArray, outputSize);
+            outputArray[outputSize - 1] = stringArray[i];
         }
     }
     return outputArray;
